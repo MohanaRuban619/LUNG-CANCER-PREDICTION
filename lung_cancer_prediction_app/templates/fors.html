@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+        h1 {text-align: center;}
+        .box {
+            column-count: 2;
+            column-gap: 40px;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNG CANCER PREDICTION</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/684/684052.png" type="image/icon type">
+</head>
+<body background="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lung-cancer-1595928153.jpg?resize=980:*">
+    <h1>ENTER THE DETAILS IN TABLE</h1>
+    <form action="{% url 'backes' %}">
+        {% csrf_token %}
+        <div class="box">
+        <h2>Age: <input type = "text" required name="Age">  <br><br>
+        Gender :<input type = "text" required name="Gender"> <br><br>
+        Air Pollution:<input type = "text" required name="Air Pollution"> <br><br>
+        Alcohol use:<input type = "text" required name="Alcohol use"> <br><br>
+        Dust Allergy:<input type = "text" required name="Dust Allergy"> <br><br>
+        OccuPational Hazards:<input type = "text" required name="OccuPational Hazards"> <br><br>
+        Genetic Risk:<input type = "text" required name="Genetic Risk"> <br><br>
+        Chronic Lung Disease:<input type = "text" required name="chronic Lung Disease"> <br><br>
+        Balanced Diet:<input type = "text" required name="Balanced Diet"> <br><br>
+        Obesity:<input type = "text" required name="Obesity"> <br><br>
+        Smoking:<input type = "text" required name="Smoking"> <br><br>
+        Passive Smoker:<input type = "text" required name="Passive Smoker"> <br><br>
+        Chest Pain:<input type = "text" required name="Chest Pain"> <br><br>
+        Coughing of Blood:<input type = "text" required name="Coughing of Blood"> <br><br>
+        Fatigue:<input type = "text" required name="Fatigue"> <br><br>
+        Weight Loss:<input type = "text" required name="Weight Loss"> <br><br>
+        Shortness of Breath:<input type = "text" required name="Shortness of Breath"> <br><br>
+        Wheezing:<input type = "text" required name="Wheezing"> <br><br>
+        Swallowing Difficulty:<input type = "text" required name="Swallowing Difficulty"> <br><br>
+        Clubbing of Finger Nails :<input type = "text" required name="Clubbing of Finger Nails"> <br><br>
+        Frequent Cold:<input type = "text" required name="Frequent Cold"> <br><br>
+        Dry Cough:<input type = "text" required name="Dry Cough"> <br><br>
+        Snoring:<input type = "text" required name="Snoring"> <br><br> </h2>
+        </div>
+        <h1><input type= "submit" value="submit" ></h1> 
+</form>
+</body>
+</html>
